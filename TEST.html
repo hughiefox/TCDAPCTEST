@@ -4,36 +4,34 @@
     <title>量表測試</title>
     
     <style>
-        body {
-            margin-left: 20px; 
-            margin-Right: 10px;
-            font-size: 30px; /* 調整字體大小 */
-            width:350px; /* 設置固定寬度 */
-            height: 30px; /* 設置固定高度 */
-            padding: 3px; /* 增加內距 */
+
+        .container {
+            max-width: 300px; /* 設置最大寬度 */
+            margin: 0 auto; /* 將容器居中 */
+            padding: 20px; /* 增加內距 */
         }
 
         .large-button {
-            font-size: 30px; /* 這會增加字體大小 */
-            padding: 10px 100px; /* 這會增加按鈕的內距 */
+            font-size: 100%; /* 這會增加字體大小 */
+            padding: 10px 10px; /* 這會增加按鈕的內距 */
         }
 
         .larger-radio {
-            width: 20px;
-            height: 20px;
+            width: 10px;
+            height: 10px;
         }
 
         .larger-number-input {
-            font-size: 30px; /* 調整字體大小 */
-            width: 100px; /* 設置固定寬度 */
-            height: 25px; /* 設置固定高度 */
+            font-size: 100%; /* 調整字體大小 */
+            width: 40px; /* 設置固定寬度 */
+            height: 15px; /* 設置固定高度 */
             padding: 5px; /* 增加內距 */
         }
 
         #resultText {
-            font-size: 20px; /* 調整字體大小 */
+            font-size: 100%; /* 調整字體大小 */
             padding: 5px; /* 增加內距 */
-            width: 397px; /* 調整寬度 */
+            width: 100%; /* 調整寬度 */
             resize: none; /* 禁用手動調整大小 */
             overflow: none; /* 允許內容溢出並顯示滾動條 */
             height: 100px; /* 設置固定高度 */
@@ -142,6 +140,8 @@
     </script>
 
 </head>
+
+<div class="container">
 <body>
     <p><b>一、物質依賴嚴重度量表-SDS量表</b><br>
         請勾選最符合過去3個月內使用成癮物質(毒品)的狀態。</p>
@@ -268,5 +268,6 @@
 
     <p><b>步驟3.請將複製細項貼到Line傳給小精靈。</b></p><br>
 
+</div>
 </body>
 </html>
