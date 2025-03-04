@@ -5,8 +5,39 @@
     
     <style>
         body {
-            margin-left: 50px; /* 这会在左侧留出20像素的空白 */
+            margin-left: 50px; 
+            margin-Right: 20px;
+            font-size: 30px; 
         }
+
+        .large-button {
+            font-size: 30px; /* 這會增加字體大小 */
+            padding: 10px 100px; /* 這會增加按鈕的內距 */
+        }
+
+        .larger-radio {
+            width: 20px;
+            height: 20px;
+        }
+
+        .larger-number-input {
+            font-size: 30px; /* 調整字體大小 */
+            width: 100px; /* 設置固定寬度 */
+            height: 25px; /* 設置固定高度 */
+            padding: 5px; /* 增加內距 */
+        }
+
+        #resultText {
+            font-size: 20px; /* 調整字體大小 */
+            padding: 5px; /* 增加內距 */
+            width: 397px; /* 調整寬度 */
+            resize: none; /* 禁用手動調整大小 */
+            overflow: none; /* 允許內容溢出並顯示滾動條 */
+            height: 100px; /* 設置固定高度 */
+            white-space: pre-wrap; /* 保持文本中的空白字符，並實現自動換行 */
+        }
+
+
     </style>
 
     <script>
@@ -109,128 +140,130 @@
 
 </head>
 <body>
-    <h1>一、物質依賴嚴重度量表-SDS量表</h1>
-        <p>請勾選最符合過去3個月內使用成癮物質(毒品)的狀態。</p>
+    <p><b>一、物質依賴嚴重度量表-SDS量表</b><br>
+        請勾選最符合過去3個月內使用成癮物質(毒品)的狀態。</p>
     <form>
         <p>1.過去3個月內，你是否曾覺得你的成癮藥物使用已經失去控制?<br>
-            <input type="radio" name="SDS1" value="0"> 從來沒有或幾乎沒有(0)<br>
-            <input type="radio" name="SDS1" value="1"> 有時(1)<br>
-            <input type="radio" name="SDS1" value="2"> 常常(2)<br>
-            <input type="radio" name="SDS1" value="3"> 總是或幾乎總是(3)<br>
+            <input type="radio" name="SDS1" value="0" class="larger-radio"> 從來沒有或幾乎沒有(0)<br>
+            <input type="radio" name="SDS1" value="1" class="larger-radio"> 有時(1)<br>
+            <input type="radio" name="SDS1" value="2" class="larger-radio"> 常常(2)<br>
+            <input type="radio" name="SDS1" value="3" class="larger-radio"> 總是或幾乎總是(3)<br>
         </p>
         <p>2.過去3個月內你是否會因即將不能用成癮藥物而感到非常焦慮或煩惱？<br>
-            <input type="radio" name="SDS2" value="0"> 從來沒有或幾乎沒有(0)<br>
-            <input type="radio" name="SDS2" value="1"> 有時(1)<br>
-            <input type="radio" name="SDS2" value="2"> 常常(2)<br>
-            <input type="radio" name="SDS2" value="3"> 總是或幾乎總是(3)<br>
+            <input type="radio" name="SDS2" value="0" class="larger-radio"> 從來沒有或幾乎沒有(0)<br>
+            <input type="radio" name="SDS2" value="1" class="larger-radio"> 有時(1)<br>
+            <input type="radio" name="SDS2" value="2" class="larger-radio"> 常常(2)<br>
+            <input type="radio" name="SDS2" value="3" class="larger-radio"> 總是或幾乎總是(3)<br>
         </p>
         <p>3.過去3個月內你是否為自己使用成癮藥物而感到煩惱？<br>
-            <input type="radio" name="SDS3" value="0"> 從來沒有或幾乎沒有(0)<br>
-            <input type="radio" name="SDS3" value="1"> 有時(1)<br>
-            <input type="radio" name="SDS3" value="2"> 常常(2)<br>
-            <input type="radio" name="SDS3" value="3"> 總是或幾乎總是(3)<br>
+            <input type="radio" name="SDS3" value="0" class="larger-radio"> 從來沒有或幾乎沒有(0)<br>
+            <input type="radio" name="SDS3" value="1" class="larger-radio"> 有時(1)<br>
+            <input type="radio" name="SDS3" value="2" class="larger-radio"> 常常(2)<br>
+            <input type="radio" name="SDS3" value="3" class="larger-radio"> 總是或幾乎總是(3)<br>
         </p>
         <p>4.過去3個月內你是否希望自己能停掉成癮藥物？<br>
-            <input type="radio" name="SDS4" value="0"> 從來沒有或幾乎沒有(0)<br>
-            <input type="radio" name="SDS4" value="1"> 有時(1)<br>
-            <input type="radio" name="SDS4" value="2"> 常常(2)<br>
-            <input type="radio" name="SDS4" value="3"> 總是或幾乎總是(3)<br>
+            <input type="radio" name="SDS4" value="0" class="larger-radio"> 從來沒有或幾乎沒有(0)<br>
+            <input type="radio" name="SDS4" value="1" class="larger-radio"> 有時(1)<br>
+            <input type="radio" name="SDS4" value="2" class="larger-radio"> 常常(2)<br>
+            <input type="radio" name="SDS4" value="3" class="larger-radio"> 總是或幾乎總是(3)<br>
         </p>
         <p>5.過去3個月內您覺得不用成癮藥物有多困難？<br>
-            <input type="radio" name="SDS5" value="0"> 毫無困難(0)<br>
-            <input type="radio" name="SDS5" value="1"> 一點點困難(1)<br>
-            <input type="radio" name="SDS5" value="2"> 相當困難(2)<br>
-            <input type="radio" name="SDS5" value="3"> 極度困難(3)<br>
+            <input type="radio" name="SDS5" value="0" class="larger-radio"> 毫無困難(0)<br>
+            <input type="radio" name="SDS5" value="1" class="larger-radio"> 一點點困難(1)<br>
+            <input type="radio" name="SDS5" value="2" class="larger-radio"> 相當困難(2)<br>
+            <input type="radio" name="SDS5" value="3" class="larger-radio"> 極度困難(3)<br>
         </p>
     </form>
 
-    <h1>二、改變動機評估量表-RCC量表</h1>
+    <p><b>二、改變動機評估量表-RCC量表</b></p>
     <form>
-        <p>1.目前來說，改變用藥行為對您來說有多重要?(0-100分) <input type="number" name="RCC1" min="0" max="100"><br>
-        2.目前來說，對於改變用藥行為，您有多大的信心?(0-100分) <input type="number" name="RCC2" min="0" max="100">
+        <p>1.目前來說，改變用藥行為對您來說有多重要?(0-100分) <input type="number" name="RCC1" min="0" max="100" class="larger-number-input"><br>
+        2.目前來說，對於改變用藥行為，您有多大的信心?(0-100分) <input type="number" name="RCC2" min="0" max="100" class="larger-number-input">
         </p>
     </form>
 
-    <h1>三、情緒與自殺風險評估-簡式健康量</h1>
+    <p><b>三、情緒與自殺風險評估-簡式健康量</b></p>
         <p>最近一星期(包含今天)，受到以下問題困擾的程度，圈選一個個案認為最能代表自己感覺的答案。</p>
     <form>
         <p>1.感覺緊張不安。<br>
-            <input type="radio" name="BSRS1" value="0"> 完全沒有(0)<br>
-            <input type="radio" name="BSRS1" value="1"> 輕微(1)<br>
-            <input type="radio" name="BSRS1" value="2"> 中等(2)<br>
-            <input type="radio" name="BSRS1" value="3"> 厲害(3)<br>
-            <input type="radio" name="BSRS1" value="4"> 非常厲害(4)<br>
+            <input type="radio" name="BSRS1" value="0" class="larger-radio"> 完全沒有(0)<br>
+            <input type="radio" name="BSRS1" value="1" class="larger-radio"> 輕微(1)<br>
+            <input type="radio" name="BSRS1" value="2" class="larger-radio"> 中等(2)<br>
+            <input type="radio" name="BSRS1" value="3" class="larger-radio"> 厲害(3)<br>
+            <input type="radio" name="BSRS1" value="4" class="larger-radio"> 非常厲害(4)<br>
         </p>
         <p>2.覺得容易苦惱與動怒。<br>
-            <input type="radio" name="BSRS2" value="0"> 完全沒有(0)<br>
-            <input type="radio" name="BSRS2" value="1"> 輕微(1)<br>
-            <input type="radio" name="BSRS2" value="2"> 中等(2)<br>
-            <input type="radio" name="BSRS2" value="3"> 厲害(3)<br>
-            <input type="radio" name="BSRS2" value="4"> 非常厲害(4)<br>
+            <input type="radio" name="BSRS2" value="0" class="larger-radio"> 完全沒有(0)<br>
+            <input type="radio" name="BSRS2" value="1" class="larger-radio"> 輕微(1)<br>
+            <input type="radio" name="BSRS2" value="2" class="larger-radio"> 中等(2)<br>
+            <input type="radio" name="BSRS2" value="3" class="larger-radio"> 厲害(3)<br>
+            <input type="radio" name="BSRS2" value="4" class="larger-radio"> 非常厲害(4)<br>
         </p>
         <p>3.感覺憂鬱心情低落。<br>
-            <input type="radio" name="BSRS3" value="0"> 完全沒有(0)<br>
-            <input type="radio" name="BSRS3" value="1"> 輕微(1)<br>
-            <input type="radio" name="BSRS3" value="2"> 中等(2)<br>
-            <input type="radio" name="BSRS3" value="3"> 厲害(3)<br>
-            <input type="radio" name="BSRS3" value="4"> 非常厲害(4)<br>
+            <input type="radio" name="BSRS3" value="0" class="larger-radio"> 完全沒有(0)<br>
+            <input type="radio" name="BSRS3" value="1" class="larger-radio"> 輕微(1)<br>
+            <input type="radio" name="BSRS3" value="2" class="larger-radio"> 中等(2)<br>
+            <input type="radio" name="BSRS3" value="3" class="larger-radio"> 厲害(3)<br>
+            <input type="radio" name="BSRS3" value="4" class="larger-radio"> 非常厲害(4)<br>
         </p>
         <p>4.覺得比不上人家。<br>
-            <input type="radio" name="BSRS4" value="0"> 完全沒有(0)<br>
-            <input type="radio" name="BSRS4" value="1"> 輕微(1)<br>
-            <input type="radio" name="BSRS4" value="2"> 中等(2)<br>
-            <input type="radio" name="BSRS4" value="3"> 厲害(3)<br>
-            <input type="radio" name="BSRS4" value="4"> 非常厲害(4)<br>
+            <input type="radio" name="BSRS4" value="0" class="larger-radio"> 完全沒有(0)<br>
+            <input type="radio" name="BSRS4" value="1" class="larger-radio"> 輕微(1)<br>
+            <input type="radio" name="BSRS4" value="2" class="larger-radio"> 中等(2)<br>
+            <input type="radio" name="BSRS4" value="3" class="larger-radio"> 厲害(3)<br>
+            <input type="radio" name="BSRS4" value="4" class="larger-radio"> 非常厲害(4)<br>
         </p>
         <p>5.睡眠困難，如難以入睡、易醒或早醒。<br>
-            <input type="radio" name="BSRS5" value="0"> 完全沒有(0)<br>
-            <input type="radio" name="BSRS5" value="1"> 輕微(1)<br>
-            <input type="radio" name="BSRS5" value="2"> 中等(2)<br>
-            <input type="radio" name="BSRS5" value="3"> 厲害(3)<br>
-            <input type="radio" name="BSRS5" value="4"> 非常厲害(4)<br>
+            <input type="radio" name="BSRS5" value="0" class="larger-radio"> 完全沒有(0)<br>
+            <input type="radio" name="BSRS5" value="1" class="larger-radio"> 輕微(1)<br>
+            <input type="radio" name="BSRS5" value="2" class="larger-radio"> 中等(2)<br>
+            <input type="radio" name="BSRS5" value="3" class="larger-radio"> 厲害(3)<br>
+            <input type="radio" name="BSRS5" value="4" class="larger-radio"> 非常厲害(4)<br>
         </p>
         <p>6.有自殺的想法。(附加題，不計分)<br>
-            <input type="radio" name="BSRS6" value="0"> 完全沒有(0)<br>
-            <input type="radio" name="BSRS6" value="1"> 輕微(1)<br>
-            <input type="radio" name="BSRS6" value="2"> 中等(2)<br>
-            <input type="radio" name="BSRS6" value="3"> 厲害(3)<br>
-            <input type="radio" name="BSRS6" value="4"> 非常厲害(4)<br>
+            <input type="radio" name="BSRS6" value="0" class="larger-radio"> 完全沒有(0)<br>
+            <input type="radio" name="BSRS6" value="1" class="larger-radio"> 輕微(1)<br>
+            <input type="radio" name="BSRS6" value="2" class="larger-radio"> 中等(2)<br>
+            <input type="radio" name="BSRS6" value="3" class="larger-radio"> 厲害(3)<br>
+            <input type="radio" name="BSRS6" value="4" class="larger-radio"> 非常厲害(4)<br>
         </p>
 
-        <h1>四、家庭功能評估-APGAR量表</h1>
+        <p><b>四、家庭功能評估-APGAR量表</b></p>
     <form>
         <p>1.當您遇到困難時，可以求助於家人。<br>
-            <input type="radio" name="APGAR1" value="0"> 幾乎沒有(0)<br>
-            <input type="radio" name="APGAR1" value="1"> 有時滿意(1)<br>
-            <input type="radio" name="APGAR1" value="2"> 經常滿意(2)<br>
+            <input type="radio" name="APGAR1" value="0" class="larger-radio"> 幾乎沒有(0)<br>
+            <input type="radio" name="APGAR1" value="1" class="larger-radio"> 有時滿意(1)<br>
+            <input type="radio" name="APGAR1" value="2" class="larger-radio"> 經常滿意(2)<br>
         </p>
         <p>2.家人可以和您討論事情及分攤問題。<br>
-            <input type="radio" name="APGAR2" value="0"> 幾乎沒有(0)<br>
-            <input type="radio" name="APGAR2" value="1"> 有時滿意(1)<br>
-            <input type="radio" name="APGAR2" value="2"> 經常滿意(2)<br>
+            <input type="radio" name="APGAR2" value="0" class="larger-radio"> 幾乎沒有(0)<br>
+            <input type="radio" name="APGAR2" value="1" class="larger-radio"> 有時滿意(1)<br>
+            <input type="radio" name="APGAR2" value="2" class="larger-radio"> 經常滿意(2)<br>
         </p>
         <p>3.當您希望從事新活動，或有新的發展方向時，家人都能夠接受且給予鼓勵支持。<br>
-            <input type="radio" name="APGAR3" value="0"> 幾乎沒有(0)<br>
-            <input type="radio" name="APGAR3" value="1"> 有時滿意(1)<br>
-            <input type="radio" name="APGAR3" value="2"> 經常滿意(2)<br>
+            <input type="radio" name="APGAR3" value="0" class="larger-radio"> 幾乎沒有(0)<br>
+            <input type="radio" name="APGAR3" value="1" class="larger-radio"> 有時滿意(1)<br>
+            <input type="radio" name="APGAR3" value="2" class="larger-radio"> 經常滿意(2)<br>
         </p>
         <p>4.對於您的情緒表達，家人都能接受。<br>
-            <input type="radio" name="APGAR4" value="0"> 幾乎沒有(0)<br>
-            <input type="radio" name="APGAR4" value="1"> 有時滿意(1)<br>
-            <input type="radio" name="APGAR4" value="2"> 經常滿意(2)<br>
+            <input type="radio" name="APGAR4" value="0" class="larger-radio"> 幾乎沒有(0)<br>
+            <input type="radio" name="APGAR4" value="1" class="larger-radio"> 有時滿意(1)<br>
+            <input type="radio" name="APGAR4" value="2" class="larger-radio"> 經常滿意(2)<br>
         </p>
         <p>5.家人與您相處的方式。<br>
-            <input type="radio" name="APGAR5" value="0"> 幾乎沒有(0)<br>
-            <input type="radio" name="APGAR5" value="1"> 有時滿意(1)<br>
-            <input type="radio" name="APGAR5" value="2"> 經常滿意(2)<br>
+            <input type="radio" name="APGAR5" value="0" class="larger-radio"> 幾乎沒有(0)<br>
+            <input type="radio" name="APGAR5" value="1" class="larger-radio"> 有時滿意(1)<br>
+            <input type="radio" name="APGAR5" value="2" class="larger-radio"> 經常滿意(2)<br>
         </p>
-
-
-
-        <button type="button" onclick="calculateScores()">提交</button>
     </form>
-    <h2 id="result"></h2>
-    <input type="text" id="resultText" readonly>
-    <button type="button" onclick="copyResult()">複製結果</button>
+
+    <button type="button" class="large-button" onclick="calculateScores()">步驟1.計算分數</button>
+    <p id="result"></p>
+
+    <button type="button" class="large-button" onclick="copyResult()">步驟2.複製細項</button><br>
+    <textarea type="text" id="resultText" readonly oninput="adjustWidth(this)"></textarea><br>
+
+    <p><b>步驟3.請將複製細項貼到Line傳給小精靈。</b></p><br>
+
 </body>
 </html>
