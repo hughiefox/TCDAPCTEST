@@ -3,43 +3,53 @@
 <head>
     <title>量表測試</title>
     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            font-size: 16px;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
         .container {
-            max-width: 300px; /* 設置最大寬度 */
+            max-width: 100%; /* 設置最大寬度為100% */
             margin: 0 auto; /* 將容器居中 */
             padding: 20px; /* 增加內距 */
         }
 
         .large-button {
-            font-size: 100%; /* 這會增加字體大小 */
-            padding: 10px 10px; /* 這會增加按鈕的內距 */
+            font-size: 16px; /* 調整字體大小 */
+            padding: 10px 20px; /* 增加按鈕的內距 */
+            width: 100%; /* 設置按鈕寬度為100% */
+            box-sizing: border-box; /* 包含內距和邊框 */
         }
 
         .larger-radio {
-            width: 10px;
-            height: 10px;
+            width: 20px; /* 調整寬度 */
+            height: 20px; /* 調整高度 */
         }
 
         .larger-number-input {
-            font-size: 100%; /* 調整字體大小 */
-            width: 40px; /* 設置固定寬度 */
-            height: 15px; /* 設置固定高度 */
+            font-size: 16px; /* 調整字體大小 */
+            width: 100%; /* 設置寬度為100% */
+            height: 40px; /* 設置高度 */
             padding: 5px; /* 增加內距 */
+            box-sizing: border-box; /* 包含內距和邊框 */
         }
 
         #resultText {
-            font-size: 100%; /* 調整字體大小 */
-            padding: 5px; /* 增加內距 */
-            width: 100%; /* 調整寬度 */
+            font-size: 16px; /* 調整字體大小 */
+            padding: 10px; /* 增加內距 */
+            width: 100%; /* 設置寬度為100% */
             resize: none; /* 禁用手動調整大小 */
-            overflow: none; /* 允許內容溢出並顯示滾動條 */
-            height: 100px; /* 設置固定高度 */
+            overflow: auto; /* 允許內容溢出並顯示滾動條 */
+            height: auto; /* 自動高度 */
+            min-height: 100px; /* 設置最小高度 */
             white-space: pre-wrap; /* 保持文本中的空白字符，並實現自動換行 */
+            box-sizing: border-box; /* 包含內距和邊框 */
         }
-
-
-    </style>
+    </style> 
 
     <script>
         function calculateScores() {
@@ -269,5 +279,17 @@
     <p><b>步驟3.請將複製細項貼到Line傳給小精靈。</b></p><br>
 
 </div>
+
+<script>
+    function adjustHeight(textarea) {
+        textarea.style.height = 'auto'; // 先重置高度
+        textarea.style.height = (textarea.scrollHeight) + 'px'; // 根據內容自動調整高度
+    }
+
+    // 設置初始高度
+    document.getElementById('resultText').style.height = 
+        (document.getElementById('resultText').scrollHeight) + 'px';
+</script>
+
 </body>
 </html>
